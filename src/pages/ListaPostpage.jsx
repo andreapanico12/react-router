@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const ListaDeiPost = () => {
 
@@ -47,9 +48,15 @@ const ListaDeiPost = () => {
                   </span>
                 ))}
               </p>
-              <button className="btn btn-danger" onClick={() => handleDeletePost(post.title)}>
-                  Delete
-                </button>
+              <div className="d-flex justify-content-between">
+
+              <Link className="btn btn-success"
+               to={`/dettaglio-post/${post.title}`}
+               onClick={() => window.scrollTo(0, 0)}>
+                  Show Details
+                </Link>  
+              </div>
+
             </div>
           </div>
         </div>

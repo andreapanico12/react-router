@@ -4,7 +4,7 @@ import DefaultLayout from './layouts/DefaultLayout'
 import Homepage from './pages/Homepage'
 import ChiSiamoPage from './pages/ChiSiamopage'
 import ListaDeiPost from './pages/ListaPostpage'
-
+import DettaglioPostpage from './pages/DettaglioPostpage'
 
 function App() {
 
@@ -15,6 +15,7 @@ function App() {
             <Route path='/' Component={Homepage}/>
             <Route path='/chi-siamo' Component={ChiSiamoPage}/>
             <Route path='/lista-post' Component={ListaDeiPost}/>
+            <Route path='/dettaglio-post/:title' Component={DettaglioPostpage}/>
             
           </Route>
           
