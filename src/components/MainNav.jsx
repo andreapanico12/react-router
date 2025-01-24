@@ -19,6 +19,11 @@ const MainNav = () => {
           Lista Post
         </NavLink>
       </li>
+      <li className="nav-item">
+        <NavLink to="/crea-post" className="nav-link">
+          Crea nuovo post
+        </NavLink>
+      </li>
     </ul>
   </nav>
   )

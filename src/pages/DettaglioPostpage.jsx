@@ -10,7 +10,6 @@ function DettaglioPostpage() {
     const baseApiUrl = "http://localhost:3000"
     const [post, setPost] = useState(null);
     const navigate = useNavigate();
-    console.log('Parametro title:', title);
 
     const fetchPost = () => {
       axios.get(`${baseApiUrl}/posts/${title}`)
@@ -28,6 +27,7 @@ function DettaglioPostpage() {
       axios.delete(`${baseApiUrl}/posts/${title}`)
       .then(res => {
         fetchPost()
+        navigate(`/lista-post`)
       })
       .catch(error => {
         console.error("Errore ", error)
